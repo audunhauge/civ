@@ -1,0 +1,79 @@
+.hex {
+  position:absolute;
+  background-image: url(hex.jpg);   
+  background-size: 746px; 
+  width:200px;
+  height: 230px;
+  background-color: teal;
+  clip-path: polygon(50% 0%, 
+       100% 25%, 
+       100% 75%, 
+       50% 100%, 
+       0% 75%, 
+       0 23%);
+  
+}
+
+#main {
+    position: relative;
+    width:1387px;
+    height: 1245px;
+    border:solid gray 1px;
+    overflow: hidden;
+}
+
+
+
+div.spinner div {
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid gray 5px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    animation: spinner 800ms linear infinite;
+}
+  
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+}
+
+.hex.grass {
+    background-position-x: -40px;
+    background-position-y: -40px;
+} 
+  
+.hex.sea {
+    background-position-x: 589px;
+    background-position-y: -276px;
+}
+
+.hex.hill {
+    background-position-x: -510px;
+    background-position-y: -40px;
+} 
+  
+.hex.swamp {
+    background-position-x: 471px;
+    background-position-y: -40px;
+}
+.hex.mountain {
+    background-position-x: -394px;
+    background-position-y: -275px;
+} 
+  
+.hex.forest {
+    background-position-x:  470px;
+    background-position-y: -510px;
+}
+.hex.desert {
+    background-position-x: -510px;
+    background-position-y: -510px;
+} 
+  
+.hex.snow {
+    background-position-x: 706px;
+    background-position-y: -510px;
+}
