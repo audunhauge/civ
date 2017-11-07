@@ -1,3 +1,4 @@
+// @flow
 
 function setup() {
     let divMain = document.getElementById("main");
@@ -8,6 +9,9 @@ function setup() {
 
     const W = 150;
     const H = 90;
+    const HexH = 115;
+    const hexW = 100;
+
     let brett = [];
     let board = [];
     let px = 30;
@@ -31,8 +35,8 @@ function setup() {
         for (let j = 0; j < 9; j++) {
             let t = document.createElement('div');
             t.className = "hex";
-            t.style.top = (-170 + j * 170) + "px";
-            t.style.left = (-198 * 7 + i * 198 + 100 * j) + "px";
+            t.style.top = (-85 + j * 85) + "px";
+            t.style.left = (-hexW * 7 + i * hexW + hexW * j/2) + "px";
             divBoard.appendChild(t);
             board[i][j] = t;
         }
@@ -64,20 +68,20 @@ function setup() {
         switch (e.keyCode) {
             case 38:
                 py = (py + H - 1) % H;
-                dx = 100; dy = 170;
+                dx = 50; dy = 85;
                 break;
             case 40:
                 py = (py + 1) % H;
-                dx = -100; dy = -170;
+                dx = -50; dy = -85;
                 break;
             case 37:
                 px = (px + W - 1) % W;
-                dx = 200; dy = 0;
+                dx = 100; dy = 0;
                 break;
 
             case 39:
                 px = (px + 1) % W;
-                dx = -200; dy = 0;
+                dx = -100; dy = 0;
                 break;
             default:
                 return;
